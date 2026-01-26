@@ -1,0 +1,12 @@
+name: Checkout Code 
+on: [push] #someone code push to this repostory trigger the code
+jobs: #like pipeline one workflow can have multiple pipelines
+  build: # these should be unique
+    runs-on: ubuntu-latest  # linux OS, we can have windows or MAC
+    steps: #stages
+      - name: checkout # checkout will happens here
+        uses: actions/checkout@v6
+
+      - name: display the files 
+        run: ls -la 
+ 
