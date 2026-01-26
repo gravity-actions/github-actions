@@ -1,0 +1,13 @@
+name: Helloworld
+#on means when to trigger this pipeline we can trigger on push or manual or someother events  like ceating PR, updatingPR, creating branches, creationg issues
+on: [push] #someone code push to this repostory trigger the code
+jobs: #like pipeline one workflow can have multiple pipelines
+  hello: #this is job name 
+    runs-on: ubuntu-latest # linux OS, we can have windows or MAC
+    steps: #stages
+    - name: step1
+      if: github.ref == 'refs/heads/feature-**'
+      run: echo "Hello world"
+    - name: step2
+      if: github.ref == 'refs/heads/main'
+      run: echo "Hello gitHub Actions"
