@@ -1,0 +1,21 @@
+name: Parallel
+on: [push] #someone code push to this repostory trigger the code
+jobs: #like pipeline one workflow can have multiple pipelines
+job-1: #these should be uniqic
+    runs-on: ubuntu-latest  # linux OS, we can have windows or MAC
+    steps: #stages
+      - name: step1
+        run: echo " hi, iam from job-1"
+job-2: 
+    runs-on: ubuntu-latest  # linux OS, we can have windows or MAC
+    steps: #stages
+      - name: step1
+        run: echo " hi, iam from job-2"
+
+job-3: 
+    runs-on: ubuntu-latest  # linux OS, we can have windows or MAC
+    steps: #stages
+      - name: step1
+        run: echo " hi, iam from job-3"
+
+     
