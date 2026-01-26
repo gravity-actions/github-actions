@@ -6,7 +6,7 @@ concurrency: # this workflow should be trigger for any branch only once
     cancel-in-progress: true #exsiting will be cancelled and latest will run 
 jobs: #like pipeline one workflow can have multiple pipelines
   hello: #this is job name 
-    runs-on: ubuntu-latest # linux OS, we can have windows or MAC
+    runs-on: ubuntu-latest  # linux OS, we can have windows or MAC
     steps: #stages
     - name: step1
       run: sleep 20
