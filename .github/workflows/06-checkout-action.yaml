@@ -7,6 +7,6 @@ jobs: #like pipeline one workflow can have multiple pipelines
       - name: checkout # checkout will happens here
         uses: actions/checkout@v6
 
-      - name: display the files 
-        run: ls -la 
+      - name: display the files #display the files 
+        run: ls -la # run this command shows files 
  
